@@ -8,57 +8,77 @@
     <style>
         html, body {
             height: 100%;
+            margin: 0;
         }
         body {
             display: flex;
             flex-direction: column;
+            font-family: 'Arial', sans-serif;
         }
         main {
             flex: 1;
         }
         .header-image {
             width: 100%;
-            height: 414px; /* Adjust height as needed */
+            height: 400px; /* Adjust height as needed */
             object-fit: cover;
             object-position: center top; /* Adjust the position as needed */
+            border-bottom: 4px solid #1F2937; /* Adds a border under the image */
+        }
+        blockquote {
+            border-left: 4px solid #1F2937;
+            padding-left: 1rem;
+            margin-left: 0;
+            font-style: italic;
         }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-900">
-    <header class="bg-green-800 text-white p-4">
-        <img src="header-img.png" alt="Troop Campout" class="header-image mb-4">
-        <h1 class="text-3xl font-bold">Boy Scout Troop 354</h1>
-        <p class="text-xl">Jenison, MI</p>
+    <header class="bg-green-800 text-white">
+        <img src="header-img.png" alt="Troop Campout" class="header-image">
+        <div class="container mx-auto px-4 py-6 text-center">
+            <h1 class="text-4xl font-bold">Boy Scout Troop 354</h1>
+            <p class="text-xl mt-2">Jenison, MI</p>
+        </div>
     </header>
 
     <nav class="bg-green-600 text-white p-4">
-        <ul class="flex space-x-4">
-            <li><a href="index.html" class="hover:underline">Home</a></li>
-            <li><a href="about.html" class="hover:underline">About</a></li>
-            <li><a href="meetings.html" class="hover:underline">Meetings</a></li>
-            <li><a href="activities.html" class="hover:underline">Activities</a></li>
-            <li><a href="contact.html" class="hover:underline">Contact</a></li>
-        </ul>
+        <div class="container mx-auto px-4">
+            <ul class="flex justify-center space-x-6">
+                <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
+                <li><a href="about.html" class="hover:text-gray-300">About</a></li>
+                <li><a href="meetings.html" class="hover:text-gray-300">Meetings</a></li>
+                <li><a href="activities.html" class="hover:text-gray-300">Activities</a></li>
+                <li><a href="contact.html" class="hover:text-gray-300">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
     <main class="p-4">
-        <section class="mb-8">
-            <h2 class="text-2xl font-bold">Welcome to Troop 354</h2>
-            <p class="mt-2">Welcome to Boy Scout Troop 354, located in Jenison, MI. Our troop is dedicated to fostering leadership, teamwork, and outdoor skills in young scouts through a range of engaging activities and projects.</p>
-            <p class="mt-2">We meet every Monday evening from 7:00 to 8:30 PM whenever Jenison Public Schools are in session. If the schools are closed for weather or other reasons, our meetings are automatically canceled unless we provide other notification.</p>
-            <p class="mt-2">We are proud members of the Michigan Crossroads Council. Our troop is led by Scoutmaster Paul Flessner and Committee Chairman Todd Hollen. Our members come from Jenison, Hudsonville, and Grandville in Ottawa County, Michigan.</p>
-            <h3 class="text-xl font-semibold mt-4">Regular Schedule</h3>
-            <ul class="list-disc pl-5 mt-2">
-                <li><strong>TROOP MEETINGS:</strong> Every Monday school is in session, 7pm – 8:30pm at Georgetown United Methodist Church</li>
-                <li><strong>PATROL LEADERS COUNCIL:</strong> First Monday of each month, 8pm (at Troop meeting)</li>
-                <li><strong>ADULT COMMITTEE MEETS:</strong> Last Monday of each month, 7pm – 9pm at Georgetown United Methodist Church</li>
-                <li><strong>BOARD OF REVIEW:</strong> Last Wednesday of every month, 7pm at Holy Redeemer Parish</li>
-            </ul>
-        </section>
+        <div class="container mx-auto px-4">
+            <section class="mb-8">
+                <h2 class="text-3xl font-semibold text-gray-800">Welcome to Troop 354</h2>
+                <p class="mt-4 text-lg leading-relaxed">Welcome to Boy Scout Troop 354, located in Jenison, MI. Our troop is dedicated to fostering leadership, teamwork, and outdoor skills in young scouts through a range of engaging activities and projects.</p>
+                <p class="mt-4 text-lg leading-relaxed">We meet every Monday evening from 7:00 to 8:30 PM whenever Jenison Public Schools are in session. If the schools are closed for weather or other reasons, our meetings are automatically canceled unless we provide other notification.</p>
+                <p class="mt-4 text-lg leading-relaxed">We are proud members of the Michigan Crossroads Council. Our troop is led by Scoutmaster Paul Flessner and Committee Chairman Todd Hollen. Our members come from Jenison, Hudsonville, and Grandville in Ottawa County, Michigan.</p>
+                <h3 class="text-2xl font-semibold mt-6">Regular Schedule</h3>
+                <ul class="list-disc pl-6 mt-2 space-y-2 text-lg leading-relaxed">
+                    <li><strong>TROOP MEETINGS:</strong> Every Monday school is in session, 7pm – 8:30pm at Georgetown United Methodist Church</li>
+                    <li><strong>PATROL LEADERS COUNCIL:</strong> First Monday of each month, 8pm (at Troop meeting)</li>
+                    <li><strong>ADULT COMMITTEE MEETS:</strong> Last Monday of each month, 7pm – 9pm at Georgetown United Methodist Church</li>
+                    <li><strong>BOARD OF REVIEW:</strong> Last Wednesday of every month, 7pm at Holy Redeemer Parish</li>
+                </ul>
+                <blockquote class="mt-6 bg-gray-200 p-4 rounded-lg text-gray-800">
+                    “Scouting is a game with a purpose.” – Baden-Powell, Scouting’s founder
+                </blockquote>
+            </section>
+        </div>
     </main>
 
     <footer class="bg-green-800 text-white p-4 text-center">
-        <p>&copy; 2024 Boy Scout Troop 354, Jenison, MI</p>
+        <div class="container mx-auto px-4">
+            <p>&copy; 2024 Boy Scout Troop 354, Jenison, MI</p>
+        </div>
     </footer>
 </body>
 </html>
