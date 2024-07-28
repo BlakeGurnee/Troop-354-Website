@@ -1,0 +1,52 @@
+/* styles.css */
+
+/* Custom styles */
+header {
+    background-color: #2d6a4f; /* Dark green for the header */
+}
+
+nav {
+    background-color: #1b4332; /* Slightly darker green for the navigation */
+}
+
+nav a {
+    color: #ffffff; /* White color for links in the navigation */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+footer {
+    background-color: #2d6a4f; /* Matching footer background color with header */
+}
+
+footer p {
+    margin: 0; /* Remove default margin from footer text */
+}
+
+main {
+    max-width: 1200px; /* Set a max-width for main content */
+    margin: 0 auto; /* Center the main content */
+}
+
+section {
+    border-radius: 8px; /* Rounded corners for sections */
+    background-color: #ffffff; /* White background for content sections */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+input, textarea {
+    border-radius: 4px; /* Rounded corners for form fields */
+    border: 1px solid #d1d5db; /* Light gray border for form fields */
+}
+
+button {
+    background-color: #2d6a4f; /* Green background for buttons */
+    border: none; /* Remove default border from button */
+    border-radius: 4px; /* Rounded corners for buttons */
+}
+
+button:hover {
+    background-color: #1b4332; /* Darker green on button hover */
+}
