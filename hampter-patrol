@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamster Patrol - Troop 354</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: 'Arial', sans-serif;
+        }
+        main {
+            flex: 1;
+        }
+        .header-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            object-position: center top;
+            border-bottom: 4px solid #1F2937;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <header class="bg-green-800 text-white">
+        <img src="header-img.png" alt="Troop Campout" class="header-image">
+        <div class="container mx-auto px-4 py-6 text-center">
+            <h1 class="text-4xl font-bold">Boy Scout Troop 354</h1>
+            <p class="text-xl mt-2">Jenison, MI</p>
+        </div>
+    </header>
+
+    <nav class="bg-green-600 text-white p-4">
+        <div class="container mx-auto px-4">
+            <ul class="flex justify-center space-x-6">
+                <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
+                <li><a href="about.html" class="hover:text-gray-300">About</a></li>
+                <li><a href="meetings.html" class="hover:text-gray-300">Meetings</a></li>
+                <li><a href="activities.html" class="hover:text-gray-300">Activities</a></li>
+                <li class="dropdown relative">
+                    <a href="#" class="hover:text-gray-300">Patrols</a>
+                    <div class="dropdown-content absolute mt-2 w-48 bg-white shadow-lg rounded-md">
+                        <a href="hamster-patrol.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Hamster Patrol</a>
+                        <a href="skibbidy-toilets-patrol.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Skibbidy Toilets Patrol</a>
+                        <a href="deadly-cupcakes-patrol.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Deadly Cupcakes Patrol</a>
+                        <a href="wild-monkeys.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Wild Monkeys</a>
+                        <a href="flaming-phoenix.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Flaming Phoenix</a>
+                    </div>
+                </li>
+                <li><a href="contact.html" class="hover:text-gray-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="p-4">
+        <div class="container mx-auto px-4">
+            <section class="mb-8">
+                <h2 class="text-3xl font-semibold text-gray-800">Hampter Patrol</h2>
+                <p class="mt-2 text-lg leading-relaxed">The Hampter Patrol is known for its agility and enthusiasm. Our activities include a variety of fun and educational experiences designed to develop teamwork and scouting skills.</p>
+                <!-- Add more details about Hamster Patrol here -->
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-green-800 text-white p-4 text-center">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2024 Boy Scout Troop 354, Jenison, MI</p>
+        </div>
+    </footer>
+</body>
+</html>
