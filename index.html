@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Troop 354</title>
+    <title>Page Title</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         html, body {
@@ -25,6 +25,12 @@
             object-position: center top;
             border-bottom: 4px solid #1F2937;
         }
+        .dropdown-content {
+            display: none;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-900">
@@ -44,7 +50,7 @@
                 <li><a href="meetings.html" class="hover:text-gray-300">Meetings</a></li>
                 <li><a href="activities.html" class="hover:text-gray-300">Activities</a></li>
                 <li class="dropdown relative">
-                    <a href="#" class="hover:text-gray-300">Patrols</a>
+                    <a href="patrols.html" class="hover:text-gray-300">Patrols</a>
                     <div class="dropdown-content absolute mt-2 w-48 bg-white shadow-lg rounded-md">
                         <a href="hampter-patrol.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Hampter Patrol</a>
                         <a href="skibbidy-toilets-patrol.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Skibbidy Toilets Patrol</a>
