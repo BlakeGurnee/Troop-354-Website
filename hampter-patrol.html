@@ -73,5 +73,20 @@
             <p>&copy; 2024 Boy Scout Troop 354, Jenison, MI</p>
         </div>
     </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var dropdown = document.querySelector('.relative');
+        dropdown.addEventListener('click', function() {
+            var dropdownContent = this.querySelector('.dropdown-content');
+            dropdownContent.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(event) {
+            if (!dropdown.contains(event.target)) {
+                dropdown.querySelector('.dropdown-content').classList.add('hidden');
+            }
+        });
+    });
+</script>
 </body>
 </html>
