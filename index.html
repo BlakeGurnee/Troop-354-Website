@@ -16,17 +16,24 @@
         main {
             flex: 1;
         }
+        .header-container {
+            width: 100%;
+            height: 300px; /* Adjust the height as needed */
+            overflow: hidden;
+        }
         .header-image {
             width: 100%;
-            height: 550px; /* Adjust height as needed */
+            height: 100%;
             object-fit: cover;
-            object-position: center center; /* Adjust the position as needed */
+            object-position: top; /* Keeps the top part of the image visible */
         }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-900">
     <header class="bg-green-800 text-white p-4">
-        <img src="header-image.jpg" alt="Troop Campout" class="header-image mb-4">
+        <div class="header-container">
+            <img src="header-image-url.jpg" alt="Troop Campout" class="header-image">
+        </div>
         <h1 class="text-3xl font-bold">Boy Scout Troop 354</h1>
         <p class="text-xl">Jenison, MI</p>
     </header>
