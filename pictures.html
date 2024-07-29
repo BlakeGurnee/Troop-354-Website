@@ -199,6 +199,11 @@
                     <a href="#" class="open-modal" data-src="images/image20.jpg">
                         <img src="images/image23.jpg" alt="Activity 23" class="w-full h-full object-cover">
                     </a>
+                               <div class="overflow-hidden rounded-lg shadow-lg media-hover">
+                    <a href="#" class="open-modal" data-type="video" data-src="videos/video1.mp4">
+                        <img src="images/video1.jpg" alt="Video 1" class="w-full h-full object-cover">
+                    </a>
+                </div>
                 </div>
                 </div>
                 </div>
@@ -210,26 +215,40 @@
         <p>&copy; 2024 Boy Scout Troop 354, Jenison, MI</p>
     </footer>
 
-    <!-- Modal -->
+     <!-- Modal -->
     <div id="myModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="modalImg">
+        <video class="modal-content" id="modalVideo" controls></video>
     </div>
 
     <script>
         // Get the modal
         var modal = document.getElementById("myModal");
 
-        // Get the image and insert it inside the modal
+        // Get the image and video elements inside the modal
         var modalImg = document.getElementById("modalImg");
+        var modalVideo = document.getElementById("modalVideo");
 
         // Get all elements with class "open-modal"
         var openModals = document.querySelectorAll(".open-modal");
 
         openModals.forEach(function(el) {
             el.onclick = function() {
+                var mediaType = this.getAttribute("data-type");
+                var mediaSrc = this.getAttribute("data-src");
+
+                if (mediaType === "image") {
+                    modalImg.src = mediaSrc;
+                    modalImg.style.display = "block";
+                    modalVideo.style.display = "none";
+                } else if (mediaType === "video") {
+                    modalVideo.src = mediaSrc;
+                    modalVideo.style.display = "block";
+                    modalImg.style.display = "none";
+                }
+
                 modal.style.display = "flex";
-                modalImg.src = this.getAttribute("data-src");
                 return false;
             }
         });
@@ -240,12 +259,14 @@
         // When the user clicks on <span> (x), close the modal
         span.onclick = function() {
             modal.style.display = "none";
+            modalVideo.pause(); // Pause the video when the modal is closed
         }
 
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
+                modalVideo.pause(); // Pause the video when the modal is closed
             }
         }
     </script>
