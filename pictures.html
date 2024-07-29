@@ -6,7 +6,6 @@
     <title>Pictures - Troop 354</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
     <style>
         .header-image {
             width: 100%;
@@ -17,6 +16,40 @@
         .image-hover:hover {
             transform: scale(1.05);
             transition: transform 0.2s;
+        }
+        /* Modal styles */
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 1000; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.8);
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            color: #fff;
+            font-size: 35px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -55,106 +88,105 @@
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-4">
                 <!-- Example images, replace with your own images -->
                 <div class="overflow-hidden rounded-lg shadow-lg image-hover">
-                    <a href="images/image1.jpg" data-lightbox="troop-gallery" data-title="Activity 1">
+                    <a href="#" class="open-modal" data-src="images/image1.jpg">
                         <img src="images/image1.jpg" alt="Activity 1" class="w-full h-full object-cover">
                     </a>
                 </div>
                 <div class="overflow-hidden rounded-lg shadow-lg image-hover">
-                    <a href="images/image2.jpg" data-lightbox="troop-gallery" data-title="Activity 2">
+                    <a href="#" class="open-modal" data-src="images/image2.jpg">
                         <img src="images/image2.jpg" alt="Activity 2" class="w-full h-full object-cover">
                     </a>
                 </div>
                 <div class="overflow-hidden rounded-lg shadow-lg image-hover">
-                    <a href="images/image3.jpg" data-lightbox="troop-gallery" data-title="Activity 3">
+                    <a href="#" class="open-modal" data-src="images/image3.jpg">
                         <img src="images/image3.jpg" alt="Activity 3" class="w-full h-full object-cover">
                     </a>
                 </div>
                 <div class="overflow-hidden rounded-lg shadow-lg image-hover">
-                    <a href="images/image4.jpg" data-lightbox="troop-gallery" data-title="Activity 4">
+                    <a href="#" class="open-modal" data-src="images/image4.jpg">
                         <img src="images/image4.jpg" alt="Activity 4" class="w-full h-full object-cover">
                     </a>
                 </div>
                 <div class="overflow-hidden rounded-lg shadow-lg image-hover">
-                    <a href="images/image5.jpg" data-lightbox="troop-gallery" data-title="Activity 5">
+                    <a href="#" class="open-modal" data-src="images/image5.jpg">
                         <img src="images/image5.jpg" alt="Activity 5" class="w-full h-full object-cover">
                     </a>
                 </div>
                 <div class="overflow-hidden rounded-lg shadow-lg image-hover">
-                    <a href="images/image6.jpg" data-lightbox="troop-gallery" data-title="Activity 6">
+                    <a href="#" class="open-modal" data-src="images/image6.jpg">
                         <img src="images/image6.jpg" alt="Activity 6" class="w-full h-full object-cover">
                     </a>
                 </div>
                 <div class="overflow-hidden rounded-lg shadow-lg image-hover">
-                    <a href="images/image7.jpg" data-lightbox="troop-gallery" data-title="Activity 7">
+                    <a href="#" class="open-modal" data-src="images/image7.jpg">
                         <img src="images/image7.jpg" alt="Activity 7" class="w-full h-full object-cover">
                     </a>
                 </div>
                 <div class="overflow-hidden rounded-lg shadow-lg image-hover">
-                    <a href="images/image8.jpg" data-lightbox="troop-gallery" data-title="Activity 8">
+                    <a href="#" class="open-modal" data-src="images/image8.jpg">
                         <img src="images/image8.jpg" alt="Activity 8" class="w-full h-full object-cover">
                     </a>
                 </div>
                 <div class="overflow-hidden rounded-lg shadow-lg image-hover">
-                    <a href="images/image9.jpg" data-lightbox="troop-gallery" data-title="Activity 9">
+                    <a href="#" class="open-modal" data-src="images/image9.jpg">
                         <img src="images/image9.jpg" alt="Activity 9" class="w-full h-full object-cover">
                     </a>
                 </div>
                 <div class="overflow-hidden rounded-lg shadow-lg image-hover">
-                    <a href="images/image10.jpg" data-lightbox="troop-gallery" data-title="Activity 10">
+                    <a href="#" class="open-modal" data-src="images/image10.jpg">
                         <img src="images/image10.jpg" alt="Activity 10" class="w-full h-full object-cover">
                     </a>
                 </div>
                 <div class="overflow-hidden rounded-lg shadow-lg image-hover">
-                    <a href="images/image11.jpg" data-lightbox="troop-gallery" data-title="Activity 11">
+                    <a href="#" class="open-modal" data-src="images/image11.jpg">
                         <img src="images/image11.jpg" alt="Activity 11" class="w-full h-full object-cover">
                     </a>
                 </div>
                 <div class="overflow-hidden rounded-lg shadow-lg image-hover">
-                    <a href="images/image12.jpg" data-lightbox="troop-gallery" data-title="Activity 12">
+                    <a href="#" class="open-modal" data-src="images/image12.jpg">
                         <img src="images/image12.jpg" alt="Activity 12" class="w-full h-full object-cover">
                     </a>
                 </div>
                 <div class="overflow-hidden rounded-lg shadow-lg image-hover">
-                    <a href="images/image13.jpg" data-lightbox="troop-gallery" data-title="Activity 13">
+                    <a href="#" class="open-modal" data-src="images/image13.jpg">
                         <img src="images/image13.jpg" alt="Activity 13" class="w-full h-full object-cover">
                     </a>
                 </div>
                 <div class="overflow-hidden rounded-lg shadow-lg image-hover">
-                    <a href="images/image14.jpg" data-lightbox="troop-gallery" data-title="Activity 14">
+                    <a href="#" class="open-modal" data-src="images/image14.jpg">
                         <img src="images/image14.jpg" alt="Activity 14" class="w-full h-full object-cover">
                     </a>
                 </div>
                 <div class="overflow-hidden rounded-lg shadow-lg image-hover">
-                    <a href="images/image15.jpg" data-lightbox="troop-gallery" data-title="Activity 15">
+                    <a href="#" class="open-modal" data-src="images/image15.jpg">
                         <img src="images/image15.jpg" alt="Activity 15" class="w-full h-full object-cover">
                     </a>
                 </div>
                 <div class="overflow-hidden rounded-lg shadow-lg image-hover">
-                    <a href="images/image16.jpg" data-lightbox="troop-gallery" data-title="Activity 16">
+                    <a href="#" class="open-modal" data-src="images/image16.jpg">
                         <img src="images/image16.jpg" alt="Activity 16" class="w-full h-full object-cover">
                     </a>
                 </div>
                 <div class="overflow-hidden rounded-lg shadow-lg image-hover">
-                    <a href="images/image17.jpg" data-lightbox="troop-gallery" data-title="Activity 17">
+                    <a href="#" class="open-modal" data-src="images/image17.jpg">
                         <img src="images/image17.jpg" alt="Activity 17" class="w-full h-full object-cover">
                     </a>
                 </div>
                 <div class="overflow-hidden rounded-lg shadow-lg image-hover">
-                    <a href="images/image18.jpg" data-lightbox="troop-gallery" data-title="Activity 18">
+                    <a href="#" class="open-modal" data-src="images/image18.jpg">
                         <img src="images/image18.jpg" alt="Activity 18" class="w-full h-full object-cover">
                     </a>
                 </div>
                 <div class="overflow-hidden rounded-lg shadow-lg image-hover">
-                    <a href="images/image19.jpg" data-lightbox="troop-gallery" data-title="Activity 19">
+                    <a href="#" class="open-modal" data-src="images/image19.jpg">
                         <img src="images/image19.jpg" alt="Activity 19" class="w-full h-full object-cover">
                     </a>
                 </div>
                 <div class="overflow-hidden rounded-lg shadow-lg image-hover">
-                    <a href="images/image20.jpg" data-lightbox="troop-gallery" data-title="Activity 20">
+                    <a href="#" class="open-modal" data-src="images/image20.jpg">
                         <img src="images/image20.jpg" alt="Activity 20" class="w-full h-full object-cover">
                     </a>
                 </div>
-                <!-- Add more images as needed -->
             </div>
         </section>
     </main>
@@ -163,6 +195,45 @@
         <p>&copy; 2024 Boy Scout Troop 354, Jenison, MI</p>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal
+        var modalImg = document.getElementById("modalImg");
+
+        // Get all elements with class "open-modal"
+        var openModals = document.querySelectorAll(".open-modal");
+
+        openModals.forEach(function(el) {
+            el.onclick = function() {
+                modal.style.display = "flex";
+                modalImg.src = this.getAttribute("data-src");
+                return false;
+            }
+        });
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
+
