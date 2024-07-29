@@ -3,54 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boy Scout Troop 354 - Jenison, MI</title>
+    <title>Boy Scout Troop 354 Training Future Leaders</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: 'Arial', sans-serif;
+        }
+        main {
+            flex: 1;
+        }
+        .header-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            object-position: center top;
+            border-bottom: 4px solid #1F2937;
+        }
+        .dropdown-content {
+            display: none;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
 </head>
 <body class="bg-gray-100 text-gray-900">
-    <header class="bg-green-800 text-white p-4">
-        <h1 class="text-3xl font-bold">Boy Scout Troop 354</h1>
-        <p class="text-xl">Jenison, MI</p>
+    <header class="bg-green-800 text-white">
+        <img src="header-img.png" alt="Troop Campout" class="header-image">
+        <div class="container mx-auto px-4 py-6 text-center">
+            <h1 class="text-4xl font-bold">Boy Scout Troop 354</h1>
+            <p class="text-xl mt-2">Jenison, MI</p>
+        </div>
     </header>
 
     <nav class="bg-green-600 text-white p-4">
-        <ul class="flex justify-center space-x-6">
-            <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
-            <li><a href="about.html" class="hover:text-gray-300">About</a></li>
-            <li><a href="meetings.html" class="hover:text-gray-300">Meetings</a></li>
-            <li class="relative group">
-                <a href="patrols.html" class="hover:text-gray-300">Patrols</a>
-                <div class="dropdown-content absolute hidden mt-2 w-48 bg-white shadow-lg rounded-md group-hover:block">
-                    <a href="hamster-patrol.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Hamster Patrol</a>
-                    <a href="skibbidy-toilets-patrol.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Skibbidy Toilets Patrol</a>
-                    <a href="deadly-cupcakes-patrol.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Deadly Cupcakes Patrol</a>
-                    <a href="wild-monkeys.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Wild Monkeys</a>
-                    <a href="flaming-phoenix.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Flaming Phoenix</a>
-                </div>
-            </li>
-            <li><a href="contact.html" class="hover:text-gray-300">Contact</a></li>
-        </ul>
+        <div class="container mx-auto px-4">
+            <ul class="flex justify-center space-x-6">
+                <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
+                <li><a href="about.html" class="hover:text-gray-300">About</a></li>
+                <li><a href="meetings.html" class="hover:text-gray-300">Meetings</a></li>
+                <li><a href="activities.html" class="hover:text-gray-300">Activities</a></li>
+                <li class="dropdown relative">
+                    <a href="patrols.html" class="hover:text-gray-300">Patrols</a>
+                    <div class="dropdown-content absolute mt-2 w-48 bg-white shadow-lg rounded-md">
+                        <a href="hampter-patrol.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Hampter Patrol</a>
+                        <a href="skibbidy-toilets-patrol.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Skibbidy Toilets Patrol</a>
+                        <a href="deadly-cupcakes-patrol.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Deadly Cupcakes Patrol</a>
+                        <a href="wild-monkeys.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Wild Monkeys Patrol</a>
+                        <a href="flaming-phoenix.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Flaming Phoenix Patrol</a>
+                    </div>
+                </li>
+                <li><a href="contact.html" class="hover:text-gray-300">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
     <main class="p-4">
-        <section class="mb-8">
-            <h2 class="text-2xl font-bold">Welcome to Troop 354</h2>
-            <p class="mt-2">Welcome to Boy Scout Troop 354, located in Jenison, MI. Our troop is dedicated to fostering leadership, teamwork, and outdoor skills in young scouts through a range of engaging activities and projects.</p>
-            <p class="mt-2">We meet every Monday evening from 7:00 to 8:30 PM whenever Jenison Public Schools are in session. If the schools are closed for weather or other reasons, our meetings are automatically canceled unless we provide other notification.</p>
-            <p class="mt-2">We are proud members of the Michigan Crossroads Council. Our troop is led by Scoutmaster Paul Flessner and Committee Chairman Todd Hollen. Our members come from Jenison, Hudsonville, and Grandville in Ottawa County, Michigan.</p>
-            <h3 class="text-xl font-semibold mt-4">Regular Schedule</h3>
-            <ul class="list-disc pl-5 mt-2">
-                <li><strong>TROOP MEETINGS:</strong> Every Monday school is in session, 7pm – 8:30pm at Georgetown United Methodist Church</li>
-                <li><strong>PATROL LEADERS COUNCIL:</strong> First Monday of each month, 8pm (at Troop meeting)</li>
-                <li><strong>ADULT COMMITTEE MEETS:</strong> Last Monday of each month, 7pm – 9pm at Georgetown United Methodist Church</li>
-                <li><strong>BOARD OF REVIEW:</strong> Last Wednesday of every month, 7pm at Holy Redeemer Parish</li>
-            </ul>
-        </section>
+         <div class="container mx-auto px-4">
+            <section class="mb-8">
+                <h2 class="text-3xl font-semibold text-gray-800">Welcome to Troop 354</h2>
+                <p class="mt-4 text-lg leading-relaxed">Welcome to Boy Scout Troop 354, located in Jenison, MI. Our troop is dedicated to fostering leadership, teamwork, and outdoor skills in young scouts through a range of engaging activities and projects.</p>
+                <p class="mt-4 text-lg leading-relaxed">We meet every Monday evening from 7:00 to 8:30 PM whenever Jenison Public Schools are in session. If the schools are closed for weather or other reasons, our meetings are automatically canceled unless we provide other notification.</p>
+                <p class="mt-4 text-lg leading-relaxed">We are proud members of the Michigan Crossroads Council. Our troop is led by Scoutmaster Paul Flessner and Committee Chairman Todd Hollen. Our members come from Jenison, Hudsonville, and Grandville in Ottawa County, Michigan.</p>
+                <h3 class="text-2xl font-semibold mt-6">Regular Schedule</h3>
+                <ul class="list-disc pl-6 mt-2 space-y-2 text-lg leading-relaxed">
+                    <li><strong>TROOP MEETINGS:</strong> Every Monday school is in session, 7pm – 8:30pm at Georgetown United Methodist Church</li>
+                    <li><strong>PATROL LEADERS COUNCIL:</strong> First Monday of each month, 8pm (at Troop meeting)</li>
+                    <li><strong>ADULT COMMITTEE MEETS:</strong> Last Monday of each month, 7pm – 9pm at Georgetown United Methodist Church</li>
+                    <li><strong>BOARD OF REVIEW:</strong> Last Wednesday of every month, 7pm at Holy Redeemer Parish</li>
+                </ul>
+                <blockquote class="mt-6 bg-gray-200 p-4 rounded-lg text-gray-800">
+                    “Scouting is a game with a purpose.” – Baden-Powell, Scouting’s founder
+                </blockquote>
+            </section>
+        </div>
     </main>
 
     <footer class="bg-green-800 text-white p-4 text-center">
-        <p>&copy; 2024 Boy Scout Troop 354, Jenison, MI</p>
+        <div class="container mx-auto px-4">
+            <p>&copy; 2024 Boy Scout Troop 354, Jenison, MI</p>
+        </div>
     </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var dropdown = document.querySelector('.relative');
+        dropdown.addEventListener('click', function() {
+            var dropdownContent = this.querySelector('.dropdown-content');
+            dropdownContent.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(event) {
+            if (!dropdown.contains(event.target)) {
+                dropdown.querySelector('.dropdown-content').classList.add('hidden');
+            }
+        });
+    });
+</script>
+
 </body>
 </html>
