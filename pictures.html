@@ -215,7 +215,7 @@
         <p>&copy; 2024 Boy Scout Troop 354, Jenison, MI</p>
     </footer>
 
-     <!-- Modal -->
+<!-- Modal -->
     <div id="myModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="modalImg">
@@ -223,52 +223,47 @@
     </div>
 
     <script>
-        // Get the modal
-        var modal = document.getElementById("myModal");
+        document.addEventListener("DOMContentLoaded", function() {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("modalImg");
+            var modalVideo = document.getElementById("modalVideo");
+            var mediaLinks = document.querySelectorAll(".open-modal");
 
-        // Get the image and video elements inside the modal
-        var modalImg = document.getElementById("modalImg");
-        var modalVideo = document.getElementById("modalVideo");
+            mediaLinks.forEach(function(link) {
+                link.onclick = function(event) {
+                    event.preventDefault();
+                    var mediaType = this.getAttribute("data-type");
+                    var mediaSrc = this.getAttribute("data-src");
 
-        // Get all elements with class "open-modal"
-        var openModals = document.querySelectorAll(".open-modal");
+                    if (mediaType === "image") {
+                        modalImg.src = mediaSrc;
+                        modalImg.style.display = "block";
+                        modalVideo.style.display = "none";
+                    } else if (mediaType === "video") {
+                        modalVideo.src = mediaSrc;
+                        modalVideo.style.display = "block";
+                        modalImg.style.display = "none";
+                    }
 
-        openModals.forEach(function(el) {
-            el.onclick = function() {
-                var mediaType = this.getAttribute("data-type");
-                var mediaSrc = this.getAttribute("data-src");
-
-                if (mediaType === "image") {
-                    modalImg.src = mediaSrc;
-                    modalImg.style.display = "block";
-                    modalVideo.style.display = "none";
-                } else if (mediaType === "video") {
-                    modalVideo.src = mediaSrc;
-                    modalVideo.style.display = "block";
-                    modalImg.style.display = "none";
+                    modal.style.display = "flex";
+                    return false;
                 }
+            });
 
-                modal.style.display = "flex";
-                return false;
+            var span = document.getElementsByClassName("close")[0];
+
+            span.onclick = function() {
+                modal.style.display = "none";
+                modalVideo.pause();
+            }
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                    modalVideo.pause();
+                }
             }
         });
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-            modalVideo.pause(); // Pause the video when the modal is closed
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-                modalVideo.pause(); // Pause the video when the modal is closed
-            }
-        }
     </script>
 </body>
 </html>
