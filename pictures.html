@@ -202,7 +202,7 @@
                         <img src="images/image23.jpg" alt="Activity 23" class="w-full h-full object-cover">
                     </a>
                 </div>
-                <div class="overflow-hidden rounded-lg shadow-lg">
+                <div class="overflow-hidden rounded-lg shadow-lg image-hover">
                     <a href="#" class="open-modal" data-type="video" data-src="videos/video1.mp4">
                         <img src="images/video-thumbnail.jpg" alt="Video Thumbnail" class="w-full h-full object-cover">
                     </a>
@@ -246,9 +246,16 @@
         function closeModal() {
             var imageModal = document.getElementById('imageModal');
             var videoModal = document.getElementById('videoModal');
+            var modalVideo = document.getElementById('modalVideo');
 
             imageModal.style.display = 'none';
             videoModal.style.display = 'none';
+
+            // Pause video and reset the source
+            if (modalVideo) {
+                modalVideo.pause();
+                modalVideo.currentTime = 0;
+            }
         }
 
         // Add event listeners to close modals
@@ -257,7 +264,8 @@
 
         // Add event listeners to open modals
         document.querySelectorAll('.open-modal').forEach(function(el) {
-            el.onclick = function() {
+            el.onclick = function(e) {
+                e.preventDefault(); // Prevent scrolling to top
                 var type = this.getAttribute('data-type');
                 var src = this.getAttribute('data-src');
                 openModal(type, src);
